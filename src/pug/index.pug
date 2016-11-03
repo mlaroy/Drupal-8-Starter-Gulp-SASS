@@ -1,0 +1,9 @@
+extends templates/_base
+
+block vars
+  - var pageTitle = "myApp"
+  - var site = {'name': 'myApp', 'description': 'Description'}
+
+
+block content
+  h1 Welcome to #{package.name} #{package.version}

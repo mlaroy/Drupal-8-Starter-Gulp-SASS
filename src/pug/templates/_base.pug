@@ -1,0 +1,31 @@
+include ../mixins/_index
+
+block vars
+  -var pageTitle = ''
+
+block bodydata
+  -var data = {}
+
+block bodyClass
+  -var bodyClass = ''
+
+doctype
+html.no-js(lang="en")
+
+  head
+    include ../partials/_head
+
+  body
+    header.header
+      a.logo(href="./")
+        span.icon.icon--logo
+        | Logo
+
+    #content(role="main" tabindex="-1")
+      block content
+
+    block footer
+      include ../partials/_footer
+
+    block scripts
+      include ../partials/_scripts

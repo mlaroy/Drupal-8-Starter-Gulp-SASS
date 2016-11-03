@@ -1,8 +1,9 @@
 > ######  DEV BUILD
-> #######  Please note this isnt prod ready. It's more of a guide for future projects and will be updated in the future as I have more awesome Drupal 8 projects around the corner.
+> #######  Please note this is a work in progress. It is currently untested, and edited as a fork from kurtisdunn/Drupal-8-Starter-Gulp-SASS, with a major overhaul to the Gulp workflow.
+> TODO: remove bootstrap js/css dependency as well as bootstrap classes. The plan is to be completely framework-free, and include Susy Grids for grid layout.
 
-# Drupal-8-Starter-Gulp-SASS
-A starter theme for Drupal 8 using Drush CLI, Boostrap 3 SASS, Gulp + BrowserSync for automation.
+# Drupal-8-Gulp-Starter
+A starter theme for Drupal 8 using Drush CLI, Gulp + BrowserSync for automation.
 
 
 ### Prerequisites
@@ -14,12 +15,12 @@ A starter theme for Drupal 8 using Drush CLI, Boostrap 3 SASS, Gulp + BrowserSyn
 ```sh
 # Download latest stable release using the code below or browse to github.com/drush-ops/drush/releases.
 wget http://files.drush.org/drush.phar
-# Or use our upcoming release: wget http://files.drush.org/drush-unstable.phar  
+# Or use our upcoming release: wget http://files.drush.org/drush-unstable.phar
 
 # Test your install.
 php drush.phar core-status
 
-# Rename to `drush` instead of `php drush.phar`. Destination can be anywhere on $PATH. 
+# Rename to `drush` instead of `php drush.phar`. Destination can be anywhere on $PATH.
 chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
 
@@ -33,14 +34,13 @@ drush init
 ```sh
 
 # clone a copy
-git clone https://github.com/kurtisdunn/Drupal-8-Starter-Gulp-SASS.git
-cd Drupal-8-Starter-Gulp-SASS
+git clone git@github.com:mlaroy/drupal-8-gulp-starter.git
+cd drupal-8-gulp-starter
 
 # get it going:
 npm install
-bower install
 
 # run it
-gulp
+gulp watch
 
 ```
