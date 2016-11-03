@@ -2,7 +2,7 @@
 > #######  Please note this is a work in progress. It is currently untested, and edited as a fork from kurtisdunn/Drupal-8-Starter-Gulp-SASS, with a major overhaul to the Gulp workflow.
 > TODO: remove bootstrap js/css dependency as well as bootstrap classes. The plan is to be completely framework-free, and include Susy Grids for grid layout.
 
-# Drupal-8-Gulp-Starter
+# Drupal 8 Gulp Starter
 A starter theme for Drupal 8 using Drush CLI, Gulp + BrowserSync for automation.
 
 

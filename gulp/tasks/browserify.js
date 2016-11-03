@@ -23,10 +23,10 @@ var config = {
   // A separate bundle will be generated for each
   // bundle config in the list below
   bundleConfigs: [{
-    entries: source.src + '/js/fw-esd-client.js',
+    entries: source.src + '/js/app.js',
     extensions: ['.js'],
     dest: source.dest + '/js/app',
-    outputName: 'fw-esd-client.js',
+    outputName: 'app.js',
 
     // list of externally available modules to exclude from the bundle
     external: ['jquery']

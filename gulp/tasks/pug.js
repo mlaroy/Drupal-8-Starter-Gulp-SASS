@@ -12,7 +12,7 @@ var filter       = require('gulp-filter');
 var debug        = require('gulp-debug');
 var util         = require('util');
 var rename       = require('gulp-rename');
-var package          = require('../../package.json');
+var package      = require('../../package.json');
 
 // load in whatever content you may reference directly to pug
 var content = {
