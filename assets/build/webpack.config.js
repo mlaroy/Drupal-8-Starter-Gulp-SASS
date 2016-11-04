@@ -142,12 +142,6 @@ const webpackConfig = {
       onBuildStart:['echo "Webpack Start"'],
       onBuildEnd:['drush cache-rebuild']}
     ),
-    new IconsPlugin({
-      fontName: 'icons',
-      timestamp: RUN_TIMESTAMP,
-      normalize: true,
-      formats: ['ttf', 'eot', 'woff', 'svg']
-    }),
     new ImageminPlugin({
       optipng: {
         optimizationLevel: 7,
