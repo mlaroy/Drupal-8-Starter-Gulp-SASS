@@ -1,5 +1,0 @@
-{
-  "src": "./src",
-  "dest": "./public",
-  "twig":"./templates"
-}
