@@ -15,7 +15,7 @@ gulp.task('twig-watch',   ['drush'], browserSync.reload);
 // gulp.watch("**/*.theme", ['drush']);
 // gulp.watch("src/*.php", ['drush']);
 
-var proxy = false;
+var proxy = true;
 
 // Out watch tasks
 gulp.task('watch', ['setWatch'],function() {
