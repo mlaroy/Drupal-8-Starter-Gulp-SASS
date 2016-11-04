@@ -1,5 +1,6 @@
-var notify = require("gulp-notify");
-var shell = require("gulp-shell");
+var gulp      = require('gulp');
+var notify    = require('gulp-notify');
+var shell     = require('gulp-shell');
 
 
 // Run drush to clear the theme registry
@@ -8,7 +9,7 @@ gulp.task('drush', function() {
       read: false
     })
     .pipe(shell([
-      'drush cc views',
+      'drush cache-rebuild',
     ]))
     .pipe(notify({
       title: "Caches cleared",

@@ -4,7 +4,7 @@ var base         = require('../../config.json');
 
 var config =  {
   root: base.src,
-  src: base.src + '/sass/**/*.{sass,scss}',
+  src: base.src + '/scss/**/*.{sass,scss}',
   dest: base.dest + '/styleguide',
   options: { title: '' },
   settings: {
