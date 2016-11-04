@@ -28,8 +28,7 @@ const config = mergeWithConcat({
     uglifyJs: !(argv.p || argv.optimizeMinimize),
   },
   watch: [
-    'templates/**/*.twig',
-    'src/**/*.php',
+    'templates/**/*.twig'
   ],
 }, userConfig);
 

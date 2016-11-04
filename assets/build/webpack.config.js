@@ -13,6 +13,8 @@ const webpackConfigProduction = require('./webpack.config.production');
 const webpackConfigWatch = require('./webpack.config.watch');
 const config = require('./config');
 
+const WebpackShellPlugin = require('webpack-shell-plugin');
+
 const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]';
 const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceMap';
 
@@ -20,12 +22,14 @@ const kssWebpackPlugin = require('kss-webpack-plugin');
 const kssConfig = {
   source: path.join(__dirname,'../styles'),
   builder: path.join(__dirname,'../kss-template'),
-  destination: path.join(__dirname,'../../../../../../../styleguide'),
+  destination: path.join(__dirname,'../../../../../styleguide'),
   homepage: '../../../README.md',
   title: 'Drupal 8 Starter Kit',
   css:[
+  '../themes/custom/custom-theme/dist/css/main.css'
   ],
   js:[
+    '../themes/custom/custom-theme/dist/scripts/main.js'
   ]
 }
 
@@ -134,6 +138,16 @@ const webpackConfig = {
   },
   plugins: [
     new CleanPlugin([config.paths.dist], config.paths.root),
+    new WebpackShellPlugin({
+      onBuildStart:['echo "Webpack Start"'],
+      onBuildEnd:['drush cache-rebuild']}
+    ),
+    new IconsPlugin({
+      fontName: 'icons',
+      timestamp: RUN_TIMESTAMP,
+      normalize: true,
+      formats: ['ttf', 'eot', 'woff', 'svg']
+    }),
     new ImageminPlugin({
       optipng: {
         optimizationLevel: 7,

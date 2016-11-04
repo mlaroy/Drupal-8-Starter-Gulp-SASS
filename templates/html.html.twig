@@ -51,7 +51,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Drupal 8">
     <link rel="apple-touch-icon" href="themes/monoset/images/touch/apple-touch-icon.png">
-    <link rel="stylesheet" href="{{ directory }}/public/css/app.css">
+    <link rel="stylesheet" href="{{ directory }}/dist/css/main.css">
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="themes/monoset/images/touch/ms-touch-icon-144x144-precomposed.png">
     {{ head }}
@@ -62,7 +62,7 @@
 
   <body{{ attributes.addClass(body_classes) }}>
 
-    <h1>Hello world!</h1>
+    <h1>Hello World!</h1>
 
 
     <a id="top" href="#main-content" class="visually-hidden focusable skip-link">
@@ -72,5 +72,6 @@
     {{ page }}
     {{ page_bottom }}
     {{ scripts_bottom }}
+    <script src="{{ directory }}/dist/scripts/main.js"></script>
   </body>
 </html>

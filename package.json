@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/mlaroy/drupal-8-webpack-starter.git"
   },
-   "bugs": {
+  "bugs": {
     "url": "https://github.com/mlaroy/drupal-8-webpack-starter/issues"
   },
   "licenses": [
@@ -52,6 +52,7 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "glob-all": "^3.1.0",
+    "icons-loader": "0.0.6",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-webpack-plugin": "^1.1.0",
     "imports-loader": "^0.6.5",
@@ -72,7 +73,8 @@
     "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.22",
     "webpack-dev-middleware": "^1.7.0",
-    "webpack-hot-middleware": "^2.12.2"
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-shell-plugin": "^0.4.3"
   },
   "dependencies": {
     "jquery": "1.12.4 - 3"
