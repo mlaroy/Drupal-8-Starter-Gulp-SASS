@@ -30,6 +30,11 @@ cd theme-name
 nvm use stable
 npm install
 ```
+Clean out this git history and start a new repo for your new project
+```sh
+rm -rf .git && git init
+git commit -m "Initialized with Drupal Webpack Starter"
+```
 
 You now have all the necessary dependencies to run the build process.
 
