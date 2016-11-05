@@ -4,3 +4,4 @@ fonts/
 images/
 logo.svg
 dist/
+.npm-debug-log
