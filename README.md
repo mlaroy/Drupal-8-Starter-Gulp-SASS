@@ -1,11 +1,11 @@
 > ######  DEV BUILD
 > #######  Please note this is a work in progress. It is currently untested, and edited as a fork from kurtisdunn/Drupal-8-Starter-Gulp-SASS, with a major overhaul to the Gulp workflow.
 
-# Drupal 8 Gulp Starter
-A starter theme for Drupal 8 using Drush CLI, KSS, Gulp + BrowserSync for automation.
+# Drupal 8 Webpack Starter
+A starter theme for Drupal 8 using Drush CLI, KSS, Webpack + BrowserSync for automation.
 
 
-### Assumptions
+#### Assumptions
 
 - A new [Drupal 8](https://www.drupal.org/drupal-8.0.2-release-notes) install is running.
 - [NodeJS](https://nodejs.org/en/download/)
@@ -13,21 +13,64 @@ A starter theme for Drupal 8 using Drush CLI, KSS, Gulp + BrowserSync for automa
 
 ```sh
 brew install drush
-
 drush dl drupal-8
+```
 
-# clone a copy into your themes directory
-cd themes
+### Clone a copy into your themes directory
+```sh
+cd drupal-site/themes
 mkdir custom
 cd custom
-git clone git@github.com:mlaroy/drupal-8-gulp-starter.git theme-name
+git clone git@github.com:mlaroy/drupal-8-webpack-starter.git theme-name
 cd theme-name
+```
 
-# get it going with the latest Node:
+### Get it going with the latest Node:
+```sh
 nvm use stable
 npm install
+```
+Clean out this git history and start a new repo for your new project
+```sh
+rm -rf .git && git init
+git commit -m "Initialized with Drupal Webpack Starter"
+```
 
-# run it
-gulp watch
+You now have all the necessary dependencies to run the build process.
 
+### Build commands
+
+* `npm start` — Compile assets when file changes are made, start BrowserSync session
+* `npm run build` — Compile and optimize the files in your assets directory
+* `npm run build:production` — Compile assets for production
+
+#### Additional commands
+
+* `npm run clean` — Remove your `dist/` folder
+* `npm run lint` — Run eslint against your assets and build scripts
+* `composer test` — Check your PHP for code smells with `phpmd` and PSR-2 compliance with `phpcs`
+
+### Using BrowserSync
+
+To use BrowserSync during `npm start` you need to update `devUrl` at the bottom of `assets/config.json` to reflect your local development hostname.
+
+If your local development URL is `https://project-name.dev`, update the file to read:
+```json
+...
+  "devUrl": "https://project-name.dev",
+...
+```
+
+Update `publicPath` to reflect your folder structure:
+
+```json
+...
+  "publicPath": "/themes/custom/theme-name/"
+...
+```
+
+
+## Run it
+```sh
+npm start
 ```

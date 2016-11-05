@@ -4,4 +4,4 @@ fonts/
 images/
 logo.svg
 dist/
-.sass-cache/
+.npm-debug-log

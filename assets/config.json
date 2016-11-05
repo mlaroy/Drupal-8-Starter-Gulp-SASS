@@ -1,0 +1,16 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/app.scss"
+    ]
+  },
+  "watch": [
+    "assets/scripts/**/*.js",
+    "templates/**/*.twig"
+  ],
+  "publicPath": "/themes/custom/custom-theme",
+  "devUrl": "http://newtest.local",
+  "proxyUrl": "https://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]"
+}

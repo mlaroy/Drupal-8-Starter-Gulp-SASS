@@ -1,0 +1,25 @@
+
+// Buttons
+//
+// Buttons
+//
+// Markup:
+// <a href="" class="btn {{modifier_class}}">Button</a>
+//
+// .btn--hollow      - Hollow button
+// .btn--hollow-white  - Hollow button
+// .btn--blue        - Blue button
+// .btn--block       - Block button
+// .btn--small       - Small button
+// .btn--plain       - Plain button
+//
+// Styleguide Common.Buttons
+
+
+.btn {
+	&--hollow {
+		background: red;
+		display: inline-block;
+		padding: 10px;
+	}
+}
