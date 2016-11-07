@@ -1,5 +1,5 @@
 > ######  DEV BUILD
-> #######  Please note this is a work in progress. It is currently untested, and edited as a fork from kurtisdunn/Drupal-8-Starter-Gulp-SASS, with a major overhaul to the Gulp workflow.
+> #######  Please note this is a work in progress. It is currently untested.
 
 # Drupal 8 Webpack Starter
 A starter theme for Drupal 8 using Drush CLI, KSS, Webpack + BrowserSync for automation.
@@ -9,7 +9,7 @@ A starter theme for Drupal 8 using Drush CLI, KSS, Webpack + BrowserSync for aut
 
 - A new [Drupal 8](https://www.drupal.org/drupal-8.0.2-release-notes) install is running.
 - [NodeJS](https://nodejs.org/en/download/)
-- [Drush CLI](http://docs.drush.org/en/master/install/) must be installed locally or globally for automating cache refresh with Gulp. it is recommended that Drupal 8 sites are built using Composer, with Drush listed as a dependency.
+- [Drush CLI](http://docs.drush.org/en/master/install/) must be installed locally or globally for automating cache refresh with Wabpack.
 
 ```sh
 brew install drush
