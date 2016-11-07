@@ -1,0 +1,6 @@
+{
+  "extends": "./core/.eslintrc",
+  "rules":{
+      "no-console":0
+    }
+}
