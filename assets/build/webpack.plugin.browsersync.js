@@ -4,6 +4,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const browserSync = require('browser-sync');
 const url = require('url');
+const exec = require('child_process').exec;
 
 const mergeWithConcat = require('./util/mergeWithConcat');
 
@@ -26,6 +27,11 @@ module.exports = class {
         this.watcher = browserSync.create();
         compiler.plugin('compilation', () => this.watcher.notify('Rebuilding...'));
         this.start();
+        this.watcher.watch('templates/**/*.twig').on('change', function(){
+          exec('drush cache-rebuild', function(){
+            console.log('drush cache-rebuild complete');
+          });
+        });
       }
       // Optionally add logic for this.watcher.reload()
     });

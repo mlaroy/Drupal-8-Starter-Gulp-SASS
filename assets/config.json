@@ -6,8 +6,7 @@
     ]
   },
   "watch": [
-    "assets/scripts/**/*.js",
-    "templates/**/*.twig"
+     "templates/**/*.twig"
   ],
   "publicPath": "/themes/custom/custom-theme",
   "devUrl": "http://newtest.local",

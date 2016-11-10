@@ -79,6 +79,10 @@ const webpackConfig = {
           ],
         }),
       },
+       {
+        test: /\.css$/,
+        loader: 'css-loader!postcss-loader' // for iconfont generation
+      },
       {
         test: /\.scss$/,
         include: config.paths.assets,
